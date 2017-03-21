@@ -1,4 +1,4 @@
-; Local, Dev, Test logins
+﻿; Local, Dev, Test logins
 :*:lsmac::leaseplanrentalbrk@macadam.eu{tab}pitstop{enter}
 :*:lpmac::poolbeheer@leaseplan.be{tab}pitstop{enter}
 :*:lrmac::anneke.geerdink@leaseplan.nl{tab}pitstop{enter}
