@@ -65,12 +65,3 @@ IfWinExist, FileZilla$
 else
 	Run C:\Program Files\FileZilla FTP Client\filezilla.exe
 return
-
-
-; CapsLock & S: HeidiSql
-CapsLock & S::
-IfWinExist, HeidiSQL\s*\d+(\.\d+)+$
-	WinActivate
-else
-	Run C:\Program Files\HeidiSQL\heidisql.exe
-return
