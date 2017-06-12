@@ -1,7 +1,7 @@
 ; Copy two blocks of text and compare them in diff program
 ; Control + Windows + Left Arrow: Put left part in %A_Desktop%\left.txt
-; Control + Windows + Down Arrow: Put right part in %A_Desktop%\right.txt and open diff program
-; Control + Windows + Right Arrow: open diff program with left vs right
+; Control + Windows + Right Arrow: Put right part in %A_Desktop%\right.txt and open diff program
+; Control + Windows + Down Arrow: open diff program with left vs right
 ; Control + Windows + Up: show current clipboard content
 ; Select a file in Explorer to compare the contents
 
@@ -48,7 +48,7 @@ if IsFunc("Notify")
 }
 return
 
-^#Down::
+^#Right::
 Send, ^c
 Sleep, 150
 doCompare = false
@@ -68,7 +68,7 @@ if doCompare = true
 }
 return
 
-^#Right::
+^#Down::
 DiffMergeOpenAppl(GetLeft(), GetRight())
 return
 
