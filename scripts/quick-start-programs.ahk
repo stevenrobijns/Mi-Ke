@@ -65,3 +65,36 @@ IfWinExist, FileZilla$
 else
 	Run C:\Program Files\FileZilla FTP Client\filezilla.exe
 return
+
+
+; CapsLock & S: HeidiSql
+CapsLock & S::
+IfWinExist, HeidiSQL\s*\d+(\.\d+)+$
+	WinActivate
+else
+	Run C:\Program Files\HeidiSQL\heidisql.exe
+	WinActivate
+return
+
+
+; CapsLock & Q: Robomongo
+CapsLock & Q::
+IfWinExist, Robomongo\s*\d+(\.\d+)+$
+	WinActivate
+else
+	Run C:\Program Files\Robomongo 0.9.0\Robomongo.exe
+	WinActivate
+return
+
+
+; Capslock & W: Chrome window
+Capslock & W::
+Run chrome
+return
+
+; Capslock & X: Copy and open Google search
+Capslock & X::
+Send, ^c
+Sleep 50
+Run, http://www.google.com/search?q=%clipboard%
+return
